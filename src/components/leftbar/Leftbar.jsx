@@ -10,6 +10,8 @@ import {
 	Event,
 	School,
 } from '@material-ui/icons';
+import { Users } from '../../dummyData.js';
+import CloseFriend from '../closeFriend/CloseFriend';
 
 export default function Leftbar() {
 	return (
@@ -56,110 +58,9 @@ export default function Leftbar() {
 				<button className="leftbarButton">Show more</button>
 				<hr className="leftbarHr" />
 				<ul className="leftbarFriendList">
-					<li className="leftbarFriend">
-						<img
-							className="leftbarFriendImage"
-							src="/assets/person/2.jpeg"
-							alt=""
-						/>
-						<span className="leftbarFriendName">John Doe</span>
-					</li>
-					<li className="leftbarFriend">
-						<img
-							className="leftbarFriendImage"
-							src="/assets/person/2.jpeg"
-							alt=""
-						/>
-						<span className="leftbarFriendName">John Doe</span>
-					</li>
-					<li className="leftbarFriend">
-						<img
-							className="leftbarFriendImage"
-							src="/assets/person/2.jpeg"
-							alt=""
-						/>
-						<span className="leftbarFriendName">John Doe</span>
-					</li>
-					<li className="leftbarFriend">
-						<img
-							className="leftbarFriendImage"
-							src="/assets/person/2.jpeg"
-							alt=""
-						/>
-						<span className="leftbarFriendName">John Doe</span>
-					</li>
-					<li className="leftbarFriend">
-						<img
-							className="leftbarFriendImage"
-							src="/assets/person/2.jpeg"
-							alt=""
-						/>
-						<span className="leftbarFriendName">John Doe</span>
-					</li>
-					<li className="leftbarFriend">
-						<img
-							className="leftbarFriendImage"
-							src="/assets/person/2.jpeg"
-							alt=""
-						/>
-						<span className="leftbarFriendName">John Doe</span>
-					</li>
-					<li className="leftbarFriend">
-						<img
-							className="leftbarFriendImage"
-							src="/assets/person/2.jpeg"
-							alt=""
-						/>
-						<span className="leftbarFriendName">John Doe</span>
-					</li>
-					<li className="leftbarFriend">
-						<img
-							className="leftbarFriendImage"
-							src="/assets/person/2.jpeg"
-							alt=""
-						/>
-						<span className="leftbarFriendName">John Doe</span>
-					</li>
-					<li className="leftbarFriend">
-						<img
-							className="leftbarFriendImage"
-							src="/assets/person/2.jpeg"
-							alt=""
-						/>
-						<span className="leftbarFriendName">John Doe</span>
-					</li>
-					<li className="leftbarFriend">
-						<img
-							className="leftbarFriendImage"
-							src="/assets/person/2.jpeg"
-							alt=""
-						/>
-						<span className="leftbarFriendName">John Doe</span>
-					</li>
-					<li className="leftbarFriend">
-						<img
-							className="leftbarFriendImage"
-							src="/assets/person/2.jpeg"
-							alt=""
-						/>
-						<span className="leftbarFriendName">John Doe</span>
-					</li>
-					<li className="leftbarFriend">
-						<img
-							className="leftbarFriendImage"
-							src="/assets/person/2.jpeg"
-							alt=""
-						/>
-						<span className="leftbarFriendName">John Doe</span>
-					</li>
-					<li className="leftbarFriend">
-						<img
-							className="leftbarFriendImage"
-							src="/assets/person/2.jpeg"
-							alt=""
-						/>
-						<span className="leftbarFriendName">John Doe</span>
-					</li>
+					{Users.map((u) => (
+						<CloseFriend key={u.id} user={u} />
+					))}
 				</ul>
 			</div>
 		</div>
